@@ -1,0 +1,133 @@
+:root {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #ffffff;
+  background: #09090b;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.flash-sale {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top, #3b0764 0%, transparent 40%),
+    linear-gradient(135deg, #09090b, #18181b);
+}
+
+.sale-card {
+  width: min(900px, 100%);
+  padding: 56px 32px;
+  text-align: center;
+  border: 1px solid #52525b;
+  border-radius: 28px;
+  background: rgba(24, 24, 27, 0.9);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #facc15;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1;
+}
+
+.description {
+  margin: 20px auto 40px;
+  max-width: 600px;
+  color: #d4d4d8;
+  font-size: 1.05rem;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.time-box {
+  padding: 22px 12px;
+  border-radius: 18px;
+  background: #27272a;
+  border: 1px solid #52525b;
+}
+
+.time-box strong {
+  display: block;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.time-box span {
+  display: block;
+  margin-top: 10px;
+  color: #a1a1aa;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.status {
+  min-height: 24px;
+  color: #facc15;
+  font-weight: 700;
+}
+
+button {
+  margin-top: 12px;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 12px;
+  background: #facc15;
+  color: #18181b;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fde047;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (max-width: 650px) {
+  .countdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sale-card {
+    padding: 40px 20px;
+  }
+}
