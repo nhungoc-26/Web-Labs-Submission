@@ -124,7 +124,7 @@ function updateInventoryUI() {
 }
 
 let stopTimer: (() => void) | null = null;
-
+let reservationTimer: ReturnType<typeof setTimeout> | null = null;
 function updateCountdown(remaining: number) {
   const totalSeconds = Math.floor(remaining / 1000);
 
@@ -158,6 +158,21 @@ reserve.addEventListener("click", () => {
 
   if (success) {
     status.textContent = "Đã giữ sản phẩm trong 5 giây!";
+
+    if (reservationTimer) {
+      clearTimeout(reservationTimer);
+    }
+
+    reservationTimer = setTimeout(() => {
+      const expired = inventory.expireReservation();
+
+      if (expired) {
+        inventory.releaseExpiredReservation();
+        status.textContent = "Thời gian giữ sản phẩm đã hết!";
+      }
+
+      updateInventoryUI();
+    }, 5_000);
   } else {
     status.textContent = "Không thể giữ sản phẩm.";
   }
@@ -169,6 +184,11 @@ checkout.addEventListener("click", () => {
   const success = inventory.checkout();
 
   if (success) {
+    if (reservationTimer) {
+      clearTimeout(reservationTimer);
+      reservationTimer = null;
+    }
+
     status.textContent = "THANH TOÁN THÀNH CÔNG!";
   } else {
     status.textContent = "Đơn giữ hàng đã hết hạn.";
