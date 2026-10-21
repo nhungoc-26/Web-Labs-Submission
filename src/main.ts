@@ -1,5 +1,7 @@
+import "./inventory-state-machine.test";
 import "./style.css";
 import { createAntiDriftTimer } from "./anti-drift-timer";
+import { InventoryStateMachine } from "./inventory-state-machine";
 
 const app = document.querySelector<HTMLDivElement>("#app");
 
@@ -43,7 +45,25 @@ app.innerHTML = `
       <p id="status" class="status" aria-live="polite">
         Flash Sale đang chuẩn bị...
       </p>
+<div class="inventory-panel">
+  <div>
+    <span class="inventory-label">TỒN KHO</span>
+    <strong id="stock">10</strong>
+  </div>
 
+  <div>
+    <span class="inventory-label">TRẠNG THÁI</span>
+    <strong id="inventory-state">AVAILABLE</strong>
+  </div>
+</div>
+
+<button id="reserve-button" type="button">
+  GIỮ SẢN PHẨM
+</button>
+
+<button id="checkout-button" type="button" disabled>
+  THANH TOÁN
+</button>
       <button id="start-button" type="button">
         BẮT ĐẦU FLASH SALE
       </button>
@@ -58,16 +78,49 @@ const millisecondsElement =
   document.querySelector<HTMLSpanElement>("#milliseconds");
 const statusElement = document.querySelector<HTMLParagraphElement>("#status");
 const startButton = document.querySelector<HTMLButtonElement>("#start-button");
-
+const stockElement = document.querySelector<HTMLElement>("#stock");
+const inventoryStateElement =
+  document.querySelector<HTMLElement>("#inventory-state");
+const reserveButton =
+  document.querySelector<HTMLButtonElement>("#reserve-button");
+const checkoutButton =
+  document.querySelector<HTMLButtonElement>("#checkout-button");
 if (
   !hoursElement ||
   !minutesElement ||
   !secondsElement ||
   !millisecondsElement ||
   !statusElement ||
-  !startButton
+  !startButton ||
+  !stockElement ||
+  !inventoryStateElement ||
+  !reserveButton ||
+  !checkoutButton
 ) {
   throw new Error("Flash sale UI elements not found");
+}
+
+const hours = hoursElement;
+const minutes = minutesElement;
+const seconds = secondsElement;
+const milliseconds = millisecondsElement;
+const status = statusElement;
+const button = startButton;
+const stock = stockElement;
+const inventoryState = inventoryStateElement;
+const reserve = reserveButton;
+const checkout = checkoutButton;
+
+const inventory = new InventoryStateMachine(10);
+
+function updateInventoryUI() {
+  const snapshot = inventory.getSnapshot();
+
+  stock.textContent = String(snapshot.stock);
+  inventoryState.textContent = snapshot.state;
+
+  checkout.disabled = snapshot.state !== "RESERVED";
+  reserve.disabled = snapshot.state !== "AVAILABLE" || snapshot.stock <= 0;
 }
 
 let stopTimer: (() => void) | null = null;
@@ -75,27 +128,53 @@ let stopTimer: (() => void) | null = null;
 function updateCountdown(remaining: number) {
   const totalSeconds = Math.floor(remaining / 1000);
 
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-  const seconds = totalSeconds % 60;
-  const milliseconds = remaining % 1000;
+  const hoursValue = Math.floor(totalSeconds / 3600);
+  const minutesValue = Math.floor((totalSeconds % 3600) / 60);
+  const secondsValue = totalSeconds % 60;
+  const millisecondsValue = remaining % 1000;
 
-  hoursElement.textContent = String(hours).padStart(2, "0");
-  minutesElement.textContent = String(minutes).padStart(2, "0");
-  secondsElement.textContent = String(seconds).padStart(2, "0");
-  millisecondsElement.textContent = String(milliseconds).padStart(3, "0");
+  hours.textContent = String(hoursValue).padStart(2, "0");
+  minutes.textContent = String(minutesValue).padStart(2, "0");
+  seconds.textContent = String(secondsValue).padStart(2, "0");
+  milliseconds.textContent = String(millisecondsValue).padStart(3, "0");
 
   if (remaining <= 0) {
-    statusElement.textContent = "FLASH SALE ĐÃ BẮT ĐẦU!";
-    startButton.disabled = false;
+    status.textContent = "FLASH SALE ĐÃ BẮT ĐẦU!";
+    button.disabled = false;
   }
 }
 
-startButton.addEventListener("click", () => {
+button.addEventListener("click", () => {
   stopTimer?.();
 
-  startButton.disabled = true;
-  statusElement.textContent = "Đang đếm ngược...";
+  button.disabled = true;
+  status.textContent = "Đang đếm ngược...";
 
   stopTimer = createAntiDriftTimer(10_000, updateCountdown);
 });
+
+reserve.addEventListener("click", () => {
+  const success = inventory.reserve(5_000);
+
+  if (success) {
+    status.textContent = "Đã giữ sản phẩm trong 5 giây!";
+  } else {
+    status.textContent = "Không thể giữ sản phẩm.";
+  }
+
+  updateInventoryUI();
+});
+
+checkout.addEventListener("click", () => {
+  const success = inventory.checkout();
+
+  if (success) {
+    status.textContent = "THANH TOÁN THÀNH CÔNG!";
+  } else {
+    status.textContent = "Đơn giữ hàng đã hết hạn.";
+  }
+
+  updateInventoryUI();
+});
+
+updateInventoryUI();
