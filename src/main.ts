@@ -120,7 +120,16 @@ function updateInventoryUI() {
   inventoryState.textContent = snapshot.state;
 
   checkout.disabled = snapshot.state !== "RESERVED";
+
   reserve.disabled = snapshot.state !== "AVAILABLE" || snapshot.stock <= 0;
+
+  if (snapshot.state === "CHECKED_OUT") {
+    status.textContent = "ĐƠN HÀNG ĐÃ ĐƯỢC THANH TOÁN!";
+  }
+
+  if (snapshot.state === "EXPIRED") {
+    status.textContent = "THỜI GIAN GIỮ SẢN PHẨM ĐÃ HẾT!";
+  }
 }
 
 let stopTimer: (() => void) | null = null;
