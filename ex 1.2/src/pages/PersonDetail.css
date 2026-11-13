@@ -1,0 +1,75 @@
+
+.detail-page {
+  width: min(900px, 92%);
+  margin: 50px auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.detail-card {
+  min-height: 320px;
+  padding: 32px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.detail-avatar {
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.detail-card h1 {
+  color: #0f172a;
+  margin: 20px 0 8px;
+}
+
+.detail-role {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.person-information {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.person-information div {
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.person-information dt {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.person-information dd {
+  margin: 0;
+  color: #0f172a;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .person-information {
+    grid-template-columns: 1fr;
+  }
+}
