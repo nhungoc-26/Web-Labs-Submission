@@ -1,0 +1,157 @@
+
+.directory {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.directory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  gap: 20px;
+}
+
+.header-label {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.directory-header h1 {
+  font-size: 36px;
+  color: #172554;
+  margin: 10px 0;
+}
+
+.directory-header p {
+  color: #64748b;
+}
+
+.member-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eff6ff;
+  padding: 18px 28px;
+  border-radius: 14px;
+  color: #2563eb;
+}
+
+.member-count strong {
+  font-size: 28px;
+}
+
+.member-count span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.directory-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.people-sidebar,
+.detail-panel {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+}
+
+.people-sidebar h2 {
+  color: #172554;
+  margin-bottom: 8px;
+}
+
+.sidebar-description {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+.people-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.person-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #334155;
+  transition: 0.2s;
+}
+
+.person-item:hover {
+  background: #f1f5f9;
+}
+
+.person-item.active {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.person-avatar {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.person-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.person-summary strong {
+  font-size: 14px;
+}
+
+.person-summary span {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.person-arrow {
+  margin-left: auto;
+  font-size: 22px;
+}
+
+.detail-panel {
+  min-height: 400px;
+}
+
+@media (max-width: 750px) {
+  .directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .directory-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .member-count {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
