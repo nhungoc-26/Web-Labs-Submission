@@ -1,0 +1,92 @@
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 480px;
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h1 {
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.form-description {
+  margin-bottom: 24px;
+  color: #64748b;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-field input:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.form-field input[aria-invalid="true"] {
+  border-color: #dc2626;
+}
+
+.field-error {
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.form-status {
+  margin: 16px 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.form-actions button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-actions .reset-button {
+  background: #64748b;
+}
+
+.form-actions button:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,86 @@
+
+#root {
+  min-height: 100vh;
+}
+
+.forum {
+  width: min(700px, 92%);
+  margin: 40px auto;
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.forum-header {
+  margin-bottom: 28px;
+}
+
+.forum-header h1 {
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+
+.forum-header p {
+  color: #64748b;
+}
+
+.channel-section,
+.messages-section,
+.message-form-section {
+  margin-top: 28px;
+}
+
+.channel-section label,
+.message-form-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font: inherit;
+}
+
+.message-list {
+  margin-top: 16px;
+}
+
+.message-list dt {
+  margin-top: 16px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.message-list dd {
+  margin: 6px 0 0;
+  padding: 12px;
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+.message-form-section button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.message-form-section button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc2626;
+}

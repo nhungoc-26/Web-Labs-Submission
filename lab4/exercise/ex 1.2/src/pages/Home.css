@@ -1,0 +1,87 @@
+
+.home-page {
+  width: min(900px, 92%);
+  margin: 50px auto;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  color: #0f172a;
+  margin: 10px 0;
+}
+
+.page-header p {
+  color: #64748b;
+}
+
+.people-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.person-card {
+  min-height: 130px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  transition: box-shadow 0.2s;
+}
+
+.person-card:hover {
+  box-shadow: 0 8px 24px rgb(15 23 42 / 8%);
+}
+
+.person-card h2 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 19px;
+}
+
+.person-card p {
+  margin: 0 0 8px;
+  color: #64748b;
+}
+
+.person-card span {
+  color: #2563eb;
+  font-size: 14px;
+}
+
+.detail-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.detail-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .person-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+}

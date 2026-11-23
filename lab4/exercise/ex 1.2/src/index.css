@@ -1,0 +1,28 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 4px;
+}
