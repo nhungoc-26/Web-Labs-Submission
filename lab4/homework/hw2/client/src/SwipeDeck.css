@@ -1,0 +1,181 @@
+.swipe-app {
+  max-width: 440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+}
+
+.scoreboard__score { display: flex; flex-direction: column; align-items: center; min-width: 72px; }
+.scoreboard__label { font-size: 0.8rem; color: #555; text-transform: uppercase; letter-spacing: 0.05em; }
+.scoreboard__value { font-size: 2rem; font-weight: 800; color: #1a7f37; }
+.scoreboard__value.is-negative { color: #c62828; }
+.scoreboard__stats { list-style: none; margin: 0; padding: 0; font-size: 0.9rem; color: #333; }
+
+.notice { margin: 0; padding: 8px 12px; border-radius: 10px; font-size: 0.9rem; }
+.notice--warn { background: #fff4d6; color: #6b4e00; }
+.notice--error { background: #fde2e2; color: #8a1c1c; }
+
+.deck {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 18px;
+  outline: none;
+}
+
+.deck:focus-visible { box-shadow: 0 0 0 3px #0b5fff; }
+
+.deck__stage {
+  position: relative;
+  height: 460px;
+}
+
+.deck__empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  margin: 0;
+  background: #fff;
+  border: 2px dashed #ccc;
+  border-radius: 18px;
+  color: #444;
+}
+
+.deck__empty-title { font-size: 1.3rem; font-weight: 700; margin: 0 0 8px; }
+
+.card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.15);
+  user-select: none;
+}
+
+.card--top {
+  cursor: grab;
+  touch-action: none; /* để pointer events hoạt động trên màn hình cảm ứng, không bị cuộn trang */
+  transition: transform 200ms ease;
+  z-index: 2;
+}
+
+.card--top:active { cursor: grabbing; }
+
+.card--behind {
+  transform: scale(0.95) translateY(12px);
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.card__photo {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__emoji { font-size: 7rem; filter: drop-shadow(0 4px 8px rgb(0 0 0 / 0.2)); }
+
+.card__body { padding: 14px 16px 16px; }
+.card__name { margin: 0 0 6px; font-size: 1.4rem; }
+.card__age { font-weight: 400; }
+.card__bio { margin: 0 0 10px; color: #333; }
+
+.card__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.card__tags li { padding: 3px 10px; background: #f1f1f4; border-radius: 999px; font-size: 0.8rem; color: #333; }
+
+.stamp {
+  position: absolute;
+  top: 20px;
+  padding: 4px 12px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  border: 4px solid currentColor;
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.85);
+  pointer-events: none;
+}
+
+.stamp--like { left: 20px; color: #1a7f37; transform: rotate(-15deg); }
+.stamp--nope { right: 20px; color: #c62828; transform: rotate(15deg); }
+.stamp--friend { left: 50%; top: auto; bottom: 20px; color: #6a3fb5; transform: translateX(-50%); }
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.ctrl {
+  min-height: 48px;
+  padding: 6px 8px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.12);
+}
+
+.ctrl:focus-visible { outline: 3px solid #0b5fff; outline-offset: 2px; }
+.ctrl:disabled { opacity: 0.45; cursor: not-allowed; }
+.ctrl--nope { color: #c62828; border-color: #f3b4b4; }
+.ctrl--friend { color: #6a3fb5; border-color: #d4c2f0; }
+.ctrl--like { color: #1a7f37; border-color: #a8dbb6; }
+.ctrl--undo { grid-column: 1 / -1; color: #333; border-color: #ccc; }
+
+.ctrl kbd,
+.deck__empty kbd {
+  font-family: inherit;
+  font-size: 0.75em;
+  padding: 0 5px;
+  margin-left: 4px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  color: #333;
+}
+
+.deck__progress { margin: 0; text-align: center; font-size: 0.85rem; color: #555; }
+
+.history { background: #fff; border-radius: 12px; padding: 10px 14px; font-size: 0.9rem; }
+.history summary { cursor: pointer; font-weight: 600; }
+.history ol { margin: 8px 0 0; padding-left: 22px; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card--top { transition: none; }
+}
