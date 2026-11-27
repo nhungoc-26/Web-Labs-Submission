@@ -1,0 +1,302 @@
+[
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80001",
+    "title": "Rondo · Trận 01",
+    "player": "TanVuu",
+    "map": "Rondo",
+    "type": "telemetry",
+    "duration": 82,
+    "avgFps": null,
+    "recordedAt": "2026-10-06T13:13:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80002",
+    "title": "Deston · Trận 02",
+    "player": "Himass",
+    "map": "Deston",
+    "type": "replay",
+    "duration": 119,
+    "avgFps": 178,
+    "recordedAt": "2026-10-11T14:26:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80003",
+    "title": "Taego · Trận 03",
+    "player": "TanVuu",
+    "map": "Taego",
+    "type": "handcam",
+    "duration": 156,
+    "avgFps": 207,
+    "recordedAt": "2026-10-16T15:39:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80004",
+    "title": "Vikendi · Trận 04",
+    "player": "Himass",
+    "map": "Vikendi",
+    "type": "telemetry",
+    "duration": 193,
+    "avgFps": null,
+    "recordedAt": "2026-10-21T16:52:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80005",
+    "title": "Miramar · Trận 05",
+    "player": "TanVuu",
+    "map": "Miramar",
+    "type": "replay",
+    "duration": 230,
+    "avgFps": 145,
+    "recordedAt": "2026-10-26T17:05:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80006",
+    "title": "Sanhok · Trận 06",
+    "player": "Himass",
+    "map": "Sanhok",
+    "type": "handcam",
+    "duration": 267,
+    "avgFps": 174,
+    "recordedAt": "2026-10-03T18:18:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80007",
+    "title": "Erangel · Trận 07",
+    "player": "TanVuu",
+    "map": "Erangel",
+    "type": "telemetry",
+    "duration": 304,
+    "avgFps": null,
+    "recordedAt": "2026-10-08T19:31:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80008",
+    "title": "Rondo · Trận 08",
+    "player": "Himass",
+    "map": "Rondo",
+    "type": "replay",
+    "duration": 341,
+    "avgFps": 232,
+    "recordedAt": "2026-10-13T12:44:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80009",
+    "title": "Deston · Trận 09",
+    "player": "TanVuu",
+    "map": "Deston",
+    "type": "handcam",
+    "duration": 378,
+    "avgFps": 141,
+    "recordedAt": "2026-10-18T13:57:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80010",
+    "title": "Taego · Trận 10",
+    "player": "Himass",
+    "map": "Taego",
+    "type": "telemetry",
+    "duration": 415,
+    "avgFps": null,
+    "recordedAt": "2026-10-23T14:10:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80011",
+    "title": "Vikendi · Trận 11",
+    "player": "TanVuu",
+    "map": "Vikendi",
+    "type": "replay",
+    "duration": 452,
+    "avgFps": 199,
+    "recordedAt": "2026-10-28T15:23:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80012",
+    "title": "Miramar · Trận 12",
+    "player": "Himass",
+    "map": "Miramar",
+    "type": "handcam",
+    "duration": 489,
+    "avgFps": 228,
+    "recordedAt": "2026-10-05T16:36:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80013",
+    "title": "Sanhok · Trận 13",
+    "player": "TanVuu",
+    "map": "Sanhok",
+    "type": "telemetry",
+    "duration": 526,
+    "avgFps": null,
+    "recordedAt": "2026-10-10T17:49:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80014",
+    "title": "Erangel · Trận 14",
+    "player": "Himass",
+    "map": "Erangel",
+    "type": "replay",
+    "duration": 563,
+    "avgFps": 166,
+    "recordedAt": "2026-10-15T18:02:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80015",
+    "title": "Rondo · Trận 15",
+    "player": "TanVuu",
+    "map": "Rondo",
+    "type": "handcam",
+    "duration": 600,
+    "avgFps": 195,
+    "recordedAt": "2026-10-20T19:15:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80016",
+    "title": "Deston · Trận 16",
+    "player": "Himass",
+    "map": "Deston",
+    "type": "telemetry",
+    "duration": 637,
+    "avgFps": null,
+    "recordedAt": "2026-10-25T12:28:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80017",
+    "title": "Taego · Trận 17",
+    "player": "TanVuu",
+    "map": "Taego",
+    "type": "replay",
+    "duration": 74,
+    "avgFps": 133,
+    "recordedAt": "2026-10-02T13:41:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80018",
+    "title": "Vikendi · Trận 18",
+    "player": "Himass",
+    "map": "Vikendi",
+    "type": "handcam",
+    "duration": 111,
+    "avgFps": 162,
+    "recordedAt": "2026-10-07T14:54:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80019",
+    "title": "Miramar · Trận 19",
+    "player": "TanVuu",
+    "map": "Miramar",
+    "type": "telemetry",
+    "duration": 148,
+    "avgFps": null,
+    "recordedAt": "2026-10-12T15:07:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80020",
+    "title": "Sanhok · Trận 20",
+    "player": "Himass",
+    "map": "Sanhok",
+    "type": "replay",
+    "duration": 185,
+    "avgFps": 220,
+    "recordedAt": "2026-10-17T16:20:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80021",
+    "title": "Erangel · Trận 21",
+    "player": "TanVuu",
+    "map": "Erangel",
+    "type": "handcam",
+    "duration": 222,
+    "avgFps": 129,
+    "recordedAt": "2026-10-22T17:33:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80022",
+    "title": "Rondo · Trận 22",
+    "player": "Himass",
+    "map": "Rondo",
+    "type": "telemetry",
+    "duration": 259,
+    "avgFps": null,
+    "recordedAt": "2026-10-27T18:46:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80023",
+    "title": "Deston · Trận 23",
+    "player": "TanVuu",
+    "map": "Deston",
+    "type": "replay",
+    "duration": 296,
+    "avgFps": 187,
+    "recordedAt": "2026-10-04T19:59:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80024",
+    "title": "Taego · Trận 24",
+    "player": "Himass",
+    "map": "Taego",
+    "type": "handcam",
+    "duration": 333,
+    "avgFps": 216,
+    "recordedAt": "2026-10-09T12:12:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80025",
+    "title": "Vikendi · Trận 25",
+    "player": "TanVuu",
+    "map": "Vikendi",
+    "type": "telemetry",
+    "duration": 370,
+    "avgFps": null,
+    "recordedAt": "2026-10-14T13:25:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80026",
+    "title": "Miramar · Trận 26",
+    "player": "Himass",
+    "map": "Miramar",
+    "type": "replay",
+    "duration": 407,
+    "avgFps": 154,
+    "recordedAt": "2026-10-19T14:38:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80027",
+    "title": "Sanhok · Trận 27",
+    "player": "TanVuu",
+    "map": "Sanhok",
+    "type": "handcam",
+    "duration": 444,
+    "avgFps": 183,
+    "recordedAt": "2026-10-24T15:51:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80028",
+    "title": "Erangel · Trận 28",
+    "player": "Himass",
+    "map": "Erangel",
+    "type": "telemetry",
+    "duration": 481,
+    "avgFps": null,
+    "recordedAt": "2026-10-01T16:04:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80029",
+    "title": "Rondo · Trận 29",
+    "player": "TanVuu",
+    "map": "Rondo",
+    "type": "replay",
+    "duration": 518,
+    "avgFps": 121,
+    "recordedAt": "2026-10-06T17:17:00.000Z"
+  },
+  {
+    "_id": "6720b1c2d3e4f5a6b7c80030",
+    "title": "Deston · Trận 30",
+    "player": "Himass",
+    "map": "Deston",
+    "type": "handcam",
+    "duration": 555,
+    "avgFps": 150,
+    "recordedAt": "2026-10-11T18:30:00.000Z"
+  }
+]
