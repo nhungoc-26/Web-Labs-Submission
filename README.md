@@ -1,6 +1,6 @@
-# Web Application Development – Lab 2 · Lab 3 · Lab 4
+# Web Application Development – Lab 2 · Lab 3 · Lab 4 · Lab 5
 
-Repo nộp bài gộp toàn bộ Lab 2, Lab 3 và Lab 4 theo **Slide 34: Complete Continuity Matrix & Repository Submission Tree**.
+Repo nộp bài gộp toàn bộ Lab 2 đến Lab 5 theo **Slide 34: Complete Continuity Matrix & Repository Submission Tree**.
 Mỗi repo cũ được đưa vào một thư mục con và **vẫn giữ nguyên lịch sử commit** (gộp bằng `git subtree add`).
 
 ## Continuity Matrix
@@ -10,6 +10,7 @@ Mỗi repo cũ được đưa vào một thư mục con và **vẫn giữ nguyê
 | **Lab 2** | Foundations & Synchronous State | Quản lý state đồng bộ, cấu trúc UI component, luồng dữ liệu reactive (mini-React tự viết, state machine, TypeScript) | [`lab2/`](lab2) |
 | **Lab 3** | Asynchronous Hooks & REST APIs | Custom hook bất đồng bộ, gọi REST API, điều phối side-effect (AbortController, 4-state UI, chống race condition) | [`lab3/`](lab3) |
 | **Lab 4** | Full-Stack Contracts & Defense | Code contract end-to-end, React Router, Express + Mongoose 8, WCAG 2.2 AA, đồng hồ zero-drift | [`lab4/`](lab4) |
+| **Lab 5** | Reducers, Real-time & Agentic Web | `useReducer` thuần + tách Context, pagination zero-effect, container queries, Sprint 1 evidence dashboard | [`lab5/`](lab5) |
 
 ## Repository Submission Tree
 
@@ -26,9 +27,12 @@ repository-root/
 ├── lab3/
 │   ├── exercise/   ← nhungoc-26/lab3             (Ex1–Ex3)
 │   └── homework/   ← nhungoc-26/lab3_HW          (HW1–HW3)
-└── lab4/
-    ├── exercise/   ← nhungoc-26/lab4_ex          (ex 1.2 → ex 1.7)
-    └── homework/   ← bài mới                     (hw1–hw3)
+├── lab4/
+│   ├── exercise/   ← nhungoc-26/lab4_ex          (ex 1.2 → ex 1.7)
+│   └── homework/   ← bài mới                     (hw1–hw3)
+└── lab5/
+    ├── exercise/   ← bài mới                     (ex 0.1 vs 0.2 - sprint1)
+    └── homework/   ← (chưa có)
 ```
 
 ## Chạy một bài bất kỳ
